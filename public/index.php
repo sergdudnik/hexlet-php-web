@@ -40,6 +40,9 @@ $app->get('/domains', function (Request $request, Response $response) use ($doma
     return $response
                 ->withHeader('Content-Type', 'application/json');
 });
+$app->post('/users', function ($request, $response) {
+    return $response->withStatus(302);
+});
 // END
 
 $app->run();
